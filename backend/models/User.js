@@ -2,9 +2,10 @@ const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 
 const userSchema = new mongoose.Schema({
-  username: String,
-  email: { type: String, unique: true },
-  password: String,
+  username: { type: String, required: true, minlength: 3 },
+  email: { type: String, required: true, unique: true, lowercase: true },
+  password: { type: String, required: true, minlength: 6, select: false },
+  isAdmin: { type: Boolean, default: false },
 });
 
 userSchema.pre("save", async function (next) {
@@ -13,4 +14,5 @@ userSchema.pre("save", async function (next) {
   next();
 });
 
-module.exports = mongoose.model("User", userSchema);
+const User = mongoose.model("User", userSchema);
+module.exports = User;
