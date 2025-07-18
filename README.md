@@ -14,8 +14,7 @@ A full-featured blogging platform built with the **MERN stack (MongoDB, Express.
 - 🧑‍💻 User profile management (bio, avatar, etc.)
 - 🔍 Search blogs by title or content
 - 🏷️ Filter by category and tags
-- 📁 Upload and display images
-- 📅 Pagination and sorting (latest / most liked)
+- 
 - 🧑‍🏫 Admin dashboard for managing blogs and users
 
 ---
